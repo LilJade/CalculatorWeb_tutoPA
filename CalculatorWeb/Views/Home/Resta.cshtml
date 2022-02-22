@@ -1,0 +1,34 @@
+﻿@model CalculatorWeb.Models.Datos;
+
+<link rel="stylesheet" href="~/css/basicStyle.css">
+
+<div class="formContainer">
+    <form asp-controller="Home" asp-action="Resta">
+        <div class="mb-3">
+            <label class="form-label">Ingresa el primer dígito: </label>
+            @if (ViewBag.num1 == 0)
+            {
+                <input type="number" asp-for="num1" placeholder="Escribe el primer numero" class="form-control" min="0" max="1000000000" />
+            }
+            else
+            {
+                <input type="number" asp-for="num1" placeholder="Escribe el primer numero" value="@ViewBag.num1" class="form-control" />
+            }
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingresa el segundo dígito: </label>
+            @if (ViewBag.num2 == 0)
+            {
+                <input type="number" asp-for="num2" placeholder="Escribe el segundo numero" class="form-control" min="0" max="1000000000" />
+            }
+            else
+            {
+                <input type="number" asp-for="num2 " placeholder="Escribe el  segundo numero" value="@ViewBag.num2" class="form-control" />
+            }
+        </div>
+        <button type="submit" class="btn btn-danger btn-lg">Restar Datos</button>
+        <div class="alert alert-success space" role="alert">
+            Resultado: <label> @ViewBag.ResultSubtraction </label>
+        </div>
+    </form>
+</div>
