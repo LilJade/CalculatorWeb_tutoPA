@@ -9,15 +9,19 @@ namespace CalculatorWeb.Services
     public interface IOperaciones
     {
         //Método suma DEBE recibir un objeto de tipo 'Datos'
+        //y DEBE retornar un valor de tipo 'Double'
         Double suma(Datos datos);
 
         //Método resta DEBE recibir un objeto de tipo 'Datos'
+        //y DEBE retornar un valor de tipo 'Double'
         Double resta(Datos datos);
 
         //Método division DEBE recibir un objeto de tipo 'Datos'
+        //y DEBE retornar un valor de tipo 'Double'
         Double division(Datos datos);
 
         //Método multiplicacion DEBE recibir un objeto de tipo 'Datos'
+        //y DEBE retornar un valor de tipo 'Double'
         Double multiplicacion(Datos datos);
     }
 }

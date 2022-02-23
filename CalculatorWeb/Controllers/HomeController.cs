@@ -69,12 +69,6 @@ namespace CalculatorWeb.Controllers
 
         public IActionResult Resta(Datos datos)
         {
-
-            if (datos.num1 < 0 || datos.num2 > 1000000000000)
-            {
-                return View("Error");
-            }
-
             Operaciones operaciones = new Operaciones();
             Double result = operaciones.resta(datos);
 
